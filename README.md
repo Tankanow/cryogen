@@ -90,9 +90,9 @@ The site configuration file is found at `templates/config.edn`, this file looks 
 
 ### Creating Posts
 
-The posts are located in `resources/templates/{md,asc}/posts`. Posts are written using Markdown or Asciidoc and each post file
-should start with the date in the format of `dd-MM-yyyy`. The compiler will link the posts in order for you using
-the dates. A valid post file might look as follows:
+The posts are located in `resources/templates/md/posts` for Markdown or `resources/templates/asc/posts` for Asciidoc.
+Posts are written using Markdown or Asciidoc and each post file should start with the date in the format of `dd-MM-yyyy`.
+The compiler will link the posts in order for you using the dates. A valid post file might look as follows:
 
 ```
 19-12-2014-post1.md
