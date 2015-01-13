@@ -5,7 +5,7 @@
 
 ## Features
 
-* blog posts and pages with Markdown
+* blog posts and pages with Markdown or Asciidoc
 * tags
 * table of contents generation
 * Default Twitter Bootstrap theme
@@ -62,7 +62,7 @@ The site configuration file is found at `templates/config.edn`, this file looks 
  :sass-src         nil
  :sass-dest        nil
  :resources        ["css" "js" "img"]
- :keep-files       [".git"] 
+ :keep-files       [".git"]
  :disqus?          false
  :disqus-shortname ""
  :ignored-files    [#"^\.#.*" #".*\.swp$"]}
@@ -90,7 +90,7 @@ The site configuration file is found at `templates/config.edn`, this file looks 
 
 ### Creating Posts
 
-The posts are located in the `resources/templates/md/posts`. Posts are written using Markdown and each post file
+The posts are located in `resources/templates/{md,asc}/posts`. Posts are written using Markdown or Asciidoc and each post file
 should start with the date in the format of `dd-MM-yyyy`. The compiler will link the posts in order for you using
 the dates. A valid post file might look as follows:
 
@@ -114,7 +114,7 @@ The metadata contains the following keys:
 * `:tags` - the tags associated with this post
 * `:toc` - boolean indicating whether table of contents should be generated, defaults to false
 
-The rest of the post should consist of valid Markdown content, eg:
+The rest of the post should consist of valid Markdown/Asciidoc content, eg:
 
 ```
 ## Hello World
@@ -135,7 +135,7 @@ nulla et vestibulum finibus, nibh justo semper tortor, nec
 vestibulum tortor est nec nisi.
 ```
 
-If you wish to enable comments on your posts, create a [disqus](https://disqus.com/) account and [register](https://disqus.com/admin/create/) your blog. `disqus?` should be set to `true` in the config and you must add your `disqus-shortname`. 
+If you wish to enable comments on your posts, create a [disqus](https://disqus.com/) account and [register](https://disqus.com/admin/create/) your blog. `disqus?` should be set to `true` in the config and you must add your `disqus-shortname`.
 
 ### Creating Pages
 
